@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: 03-Config-Server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/nitendra-soft/Configuration_properties
+          clone-on-start: true
+    
+server:
+  port: 2222
+  
