@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUtils {
 	
 	public static String saveFile(String fileName, MultipartFile file) throws Exception{
-		Path uploadPath=Paths.get("uploads/user-images");
+		Path uploadPath=Paths.get("uploads/product-images");
 		if(!Files.exists(uploadPath)) {
 			Files.createDirectories(uploadPath);
 		}

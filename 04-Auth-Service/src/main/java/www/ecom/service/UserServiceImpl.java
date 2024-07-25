@@ -27,15 +27,16 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User addUser(User user, MultipartFile file) throws Exception {
 		
-		User u = userRepo.findByEmail(user.getEmail());
-		if(u != null) {
+		User exitingUser = userRepo.findByEmail(user.getEmail());
+		
+		if(exitingUser == null) {
 			String fileName = FileUtils.saveFile(file.getName(), file);
 			String encodedPwd = pwdEncoder.encode(user.getPwd());
 			user.setPwd(encodedPwd);
 			user.setUserpic(fileName);;
 			return userRepo.save(user);
 		}
-		return u;
+		return exitingUser;
 	}
 
 	@Override
