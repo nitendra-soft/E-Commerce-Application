@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import www.ecom.constants.AppConstants;
 import www.ecom.dto.CategoryDto;
@@ -11,7 +12,7 @@ import www.ecom.entity.Category;
 import www.ecom.exception.ProductServiceException;
 import www.ecom.mapper.CategoryMapper;
 import www.ecom.repo.CategoryRepo;
-
+@Service
 public class CategoryServiceImpl implements CategoryService {
 	
 	@Autowired

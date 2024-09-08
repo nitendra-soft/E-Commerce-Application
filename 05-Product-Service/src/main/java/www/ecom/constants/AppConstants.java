@@ -25,5 +25,9 @@ public class AppConstants {
 	public static final String CATEGORY_DELETE="categoryDelete";
 	
 	public static final String CATEGORY_DELETE_ERR="categoryDeleteErr";
+	
+	public static final String PRODUCT_NOT_FOUND="Product not found";
+	
+	public static final String PRODUCT_NOT_FOUND_ERR_CD="PROD111";
 
 }

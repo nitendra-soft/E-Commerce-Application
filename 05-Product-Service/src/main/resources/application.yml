@@ -1,33 +1,6 @@
 spring:
   application:
     name: Product-Service
-  datasource:
-    url: jdbc:mysql://localhost:3306/E_Commerce_Db
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-
-server:
-  port: 8082
+  config:
+    import: optional:configserver:http://localhost:2222
   
-product-service:
- messages:
-  categoryAdded : Category Added Successfully
-  categoryAddErr : Failed To Add Category
-  categoryUpdate : Category Updated Successfully
-  categoryUpdateErr : Failed To Update Category
-  categoryFetch : All Categories Fatches Successfully
-  categoryFetchErr : Failed To Fetch All Categories
-  categorySelect : Category Retrieved Successfully
-  categorySelectErr : Failed To Retrieved Category
-  categoryDelete : Category Deleted Successfully
-  categoryDeleteErr : Failed To Delete Category
-  
-    

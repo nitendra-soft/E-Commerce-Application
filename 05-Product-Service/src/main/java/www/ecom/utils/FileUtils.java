@@ -5,7 +5,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileUtils {
